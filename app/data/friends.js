@@ -1,7 +1,7 @@
 [
   {
     "name": "Ahmed",
-    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+    "photo": "https://cdn-images-1.medium.com/max/1920/1*0ubYRV_WNR9iYrzUAVINHw.jpeg",
     "scores": [
       5,
       1,
@@ -13,22 +13,6 @@
       5,
       4,
       1
-    ]
-  },
-  {
-    "name": "Will",
-    "photo": "",
-    "scores": [
-      "3",
-      "1",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
     ]
   }
 ]

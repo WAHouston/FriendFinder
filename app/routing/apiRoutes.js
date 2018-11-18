@@ -18,6 +18,7 @@ module.exports = function(app) {
                 userSum += parseInt(scores[i])
             }
             for (var i = 0; i < array.length; i++) {
+                var sum = 0
                 for (var j = 0; j < array[i].scores.length; j++) {
                     sum += parseInt(array[i].scores[j])
                 }
@@ -26,7 +27,7 @@ module.exports = function(app) {
                     matchIndex = i
                 }
             }
-            res.end(array[matchIndex])
+            res.end(JSON.stringify(array[matchIndex]))
             array.push(req.body)
             fs.writeFile("app/data/friends.js", JSON.stringify(array, null, 2), function(err) {
                 if (err) {
