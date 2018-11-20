@@ -1,9 +1,10 @@
 const fs = require("fs")
-var friends = require("../data/friends")
 
 module.exports = function(app) {
     app.get("/api/friends", function(req, res) {
-        res.json(friends)
+        fs.readFile("app/data/friends.js", "utf8", function(err, data) {
+        res.json(JSON.parse(data))
+        })
     })
     app.post("/api/friends", function(req, res) {
         console.log("Post Recieved")
