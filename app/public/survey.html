@@ -19,8 +19,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 50%;
-        height: 40%;
+        width: 40vw;
+        height: 50vh;
         background: white;
         overflow: auto;
         border: 3px solid black;
@@ -29,7 +29,9 @@
 
       #modal-image {
         margin: auto 0;
-        width: 100%;
+        width: 35vw;
+        height: 40vh;
+
       }
     </style>
 </head>
@@ -169,7 +171,12 @@
     <script type="text/javascript">
     $("#submit").on("click", function(event) {
       event.preventDefault()
-      var newfriend = {
+      if (($("#inputname").val()) === ""){
+        alert("Please enter your name in the designated box.")
+      } else if (($("#inputimage").val()) === "") {
+        alert("Please include a link to an image of yourself in the designated box.")
+      } else {
+        var newfriend = {
             name: $("#inputname").val().trim(),
             photo: $("#inputimage").val().trim(),
             scores: [
@@ -191,6 +198,7 @@
             $("#modal-image").attr("src", stuff.photo)
             $("#modal").show()
           })
+      }
     })
     $("body").on("click", function(){
       $("#modal").hide()
